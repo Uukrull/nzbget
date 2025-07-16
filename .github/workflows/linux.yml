@@ -112,7 +112,12 @@ jobs:
     - name: Delete unneeded platform-specific artifacts
       uses: geekyeggo/delete-artifact@v5
       with:
-        name: nzbget-linux-bin-*
+        name: |
+          nzbget-linux-bin-a*
+          nzbget-linux-bin-i*
+          nzbget-linux-bin-m*
+          nzbget-linux-bin-p*
+          nzbget-linux-bin-r*
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
